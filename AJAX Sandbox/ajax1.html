@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX 1 - Text File</title>
+</head>
+
+<body>
+
+    <button id="button">Get Text File</button>
+
+    <p>
+    </p>
+
+    <hr>
+
+    <div id="text"></div>
+
+    <script>
+        //creating an event listener for button
+        document.getElementById('button').addEventListener('click', loadText);
+
+        function loadText() {
+            //create the XHR object
+            var xhr = new XMLHttpRequest();
+
+            //open function - params - type, url/filename, async
+            xhr.open('GET', 'sample1.txt', true);
+            xhr.onload = function() {
+                if (this.status == 200){
+                    console.log(this.responseText);
+                    document.getElementById('text').textContent = this.responseText;
+                } else if (this.status == 404){
+                    document.getElementById('text').textContent = "Not Found...";
+                }
+            }
+            // sends request
+            xhr.send();
+        }
+
+
+        // HTTP Status: 
+        // 200: OK
+        // 403: forbidden
+        // 404: Not found
+
+    </script>
+
+</body>
+
+
+
+</html>

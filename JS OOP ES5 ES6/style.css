@@ -1,0 +1,30 @@
+body{
+    background: #eee;
+    color: #333;
+}
+
+.heading{
+    padding: 10px;
+    background: #bbb;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: #333 solid 1px;
+    border-left: #333 solid 1px;
+    border-right: #333 solid 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.container{
+    padding: 10px;
+    background: #bbb;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: #333 solid 1px;
+    border-left: #333 solid 1px;
+    border-right: #333 solid 1px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}

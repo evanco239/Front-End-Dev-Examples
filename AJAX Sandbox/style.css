@@ -1,0 +1,17 @@
+#users{
+    background: #eee;
+    color: #333;
+    border-radius: 7px;
+    padding: 7px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#users li{
+    background: #ddd;
+    padding: 10px;
+    margin: 7px;
+    border: 1px solid #8889;
+    list-style: none;
+    border-radius: 7px;
+}
