@@ -1,0 +1,26 @@
+.container{
+    background: #eee;
+    padding: 20px;
+
+}
+
+.word{
+    width: 30%;
+    font-size: 4rem;
+    border: 1px dashed #bbb;
+    margin: auto;
+    border-radius: 7px;
+}
+
+#seconds{
+    color:goldenrod;
+}
+
+#input{
+    width: 50%;
+    margin: auto;
+}
+
+#score{
+    color: goldenrod;
+}

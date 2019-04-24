@@ -1,0 +1,42 @@
+[
+  {
+    "word": "this",
+    "difficulty": "easy"
+  },
+  {
+    "word": "that",
+    "difficulty": "easy"
+  },
+  {
+    "word": "snake",
+    "difficulty": "easy"
+  },
+  {
+    "word": "random",
+    "difficulty": "easy"
+  },
+  {
+    "word": "sneak",
+    "difficulty": "easy"
+  },
+  {
+    "word": "preview",
+    "difficulty": "medium"
+  },
+  {
+    "word": "language",
+    "difficulty": "medium"
+  },
+  {
+    "word": "generator",
+    "difficulty": "medium"
+  },
+  {
+    "word": "introduction",
+    "difficulty": "medium"
+  },
+  {
+    "word": "component",
+    "difficulty": "medium"
+  }
+]

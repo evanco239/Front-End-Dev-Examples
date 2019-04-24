@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin-top: 70px;
+        background: #333;
+        background: #eee;
+      }
+      .card {
+        margin-bottom: 4px;
+      }
+    </style>
+    <title>Weight Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4 text-center">Weight Converter</h1>
+
+          <form action="">
+            <div class="form-group">
+              <input
+                type="number"
+                name=""
+                id="lbsInput"
+                class="form-control form-control-lg"
+                placeholder="Enter Pounds..."
+              />
+            </div>
+          </form>
+
+          <div id="output">
+            <div class="card card-body">
+              <h4>Grams:</h4>
+              <div id="gramsOutput"></div>
+            </div>
+            <div class="card card-body ">
+              <h4>Kilograms:</h4>
+              <div id="kgOutput"></div>
+            </div>
+            <div class="card card-body">
+              <h4>Ounces:</h4>
+              <div id="ozOutput"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("output").style.visibility = "hidden";
+      document.getElementById("lbsInput").addEventListener("input", calculate);
+      const grams = document.getElementById("gramsOutput");
+      const kg = document.getElementById("kgOutput");
+      const oz = document.getElementById("ozOutput");
+
+      function calculate(e) {
+        let num = e.target.value;
+        if (num > 0) {
+          document.getElementById("output").style.visibility = "visible";
+          grams.textContent = (num * 453.59).toFixed(2); // pounds to grams z*453.592
+          kg.textContent = (num / 2.205).toFixed(2); //pounds to kg z/2.205
+          oz.textContent = (num * 16).toFixed(2); // pounds to ounces z*16
+        } else {
+          document.getElementById("output").style.visibility = "hidden";
+        }
+      }
+    </script>
+  </body>
+</html>

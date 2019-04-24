@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slide Show</title>
+
+    <style>
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="slider" name="slide" width="600" height="300" />
+
+    <script>
+      let i = 0;
+      const images = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg"];
+      const imgTag = document.querySelector("#slider");
+      imgTag.setAttribute("src", `./docs/${images[i]}`);
+
+      setInterval(() => {
+        if (i > images.length-1) {
+          i = 0;
+          imgTag.setAttribute("src", `./docs/${images[i]}`);
+        } else {
+          imgTag.setAttribute("src", `./docs/${images[i]}`);
+          i++;
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>
